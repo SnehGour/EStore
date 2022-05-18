@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\snehg\\OneDrive\\Desktop\\Learning\\dotNet\\dotnet\\ReStore\\API\\API.csproj": {}
+    "C:\\Users\\snehg\\OneDrive\\Desktop\\GettingPowerFull\\dotNet\\dotnet\\ReStore\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\snehg\\OneDrive\\Desktop\\Learning\\dotNet\\dotnet\\ReStore\\API\\API.csproj": {
+    "C:\\Users\\snehg\\OneDrive\\Desktop\\GettingPowerFull\\dotNet\\dotnet\\ReStore\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\snehg\\OneDrive\\Desktop\\Learning\\dotNet\\dotnet\\ReStore\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\snehg\\OneDrive\\Desktop\\GettingPowerFull\\dotNet\\dotnet\\ReStore\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\snehg\\OneDrive\\Desktop\\Learning\\dotNet\\dotnet\\ReStore\\API\\API.csproj",
+        "projectPath": "C:\\Users\\snehg\\OneDrive\\Desktop\\GettingPowerFull\\dotNet\\dotnet\\ReStore\\API\\API.csproj",
         "packagesPath": "C:\\Users\\snehg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\snehg\\OneDrive\\Desktop\\Learning\\dotNet\\dotnet\\ReStore\\API\\obj\\",
+        "outputPath": "C:\\Users\\snehg\\OneDrive\\Desktop\\GettingPowerFull\\dotNet\\dotnet\\ReStore\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\snehg\\AppData\\Roaming\\NuGet\\NuGet.Config",
