@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\snehg\\OneDrive\\Desktop\\GettingPowerFull\\dotNet\\dotnet\\ReStore\\API\\API.csproj": {}
+    "C:\\Users\\sneh.gour\\source\\repos\\EStore\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\snehg\\OneDrive\\Desktop\\GettingPowerFull\\dotNet\\dotnet\\ReStore\\API\\API.csproj": {
+    "C:\\Users\\sneh.gour\\source\\repos\\EStore\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\snehg\\OneDrive\\Desktop\\GettingPowerFull\\dotNet\\dotnet\\ReStore\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\sneh.gour\\source\\repos\\EStore\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\snehg\\OneDrive\\Desktop\\GettingPowerFull\\dotNet\\dotnet\\ReStore\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\snehg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\snehg\\OneDrive\\Desktop\\GettingPowerFull\\dotNet\\dotnet\\ReStore\\API\\obj\\",
+        "projectPath": "C:\\Users\\sneh.gour\\source\\repos\\EStore\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\sneh.gour\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sneh.gour\\source\\repos\\EStore\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\snehg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sneh.gour\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Project\\Fonto\\FontoContainer\\FontoContainer\\bin\\Debug\\net8.0\\Connected Services\\Tridion10.10.0.0.nupkg": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,7 +72,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -83,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
