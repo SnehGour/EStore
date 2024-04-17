@@ -7,6 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Catelog from './pages/Catelog';
 import Cart from './pages/Cart';
+import Footer from './component/Footer';
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/cart' element={<Cart/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );
