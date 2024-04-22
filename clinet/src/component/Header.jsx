@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom"
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { queryProducts } from '../api/products';
+import { SearchResultContext } from '../context/SearchResultContext';
+import { useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
+    const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
-    const [searchResults, setSearchResults] = useState([]); // [product1, product2, ...
+    const { setSearchResults } = useContext(SearchResultContext);
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
     };
@@ -16,7 +19,9 @@ const Header = () => {
         const products = await queryProducts(searchTerm);
         setSearchResults(products);
         console.log(products); // Log the products for now
-      };
+
+        navigate('/search');
+    };
     return (
         <>
             <nav className="navbar navbar-dark bg-primary">

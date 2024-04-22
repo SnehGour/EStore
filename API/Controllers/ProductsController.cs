@@ -39,5 +39,14 @@ namespace API.Controllers
                 .ToListAsync();
             return Ok(products);
         }
+
+        // create a action method to add a product
+        [HttpPost]
+        public async Task<ActionResult<Product>> AddProduct(Product product)
+        {
+            await _db.products.AddAsync(product);
+            await _db.SaveChangesAsync();
+            return Ok(product);
+        }
     }
 }

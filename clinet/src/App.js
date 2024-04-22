@@ -8,6 +8,10 @@ import Contact from './pages/Contact';
 import Catelog from './pages/Catelog';
 import Cart from './pages/Cart';
 import Footer from './component/Footer';
+import SearchResult from './pages/SearchResult';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import AdminPanel from './pages/AdminPanel';
 function App() {
   return (
     <>
@@ -15,6 +19,10 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/admin' element={<AdminPanel/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/search' element={<SearchResult/>}/>
           <Route path='/catelog' element={<Catelog/>}/>
           <Route path='/catelog/:id' element={<ProductDetailPage/>}/>
           <Route path='/about' element={<About/>}/>

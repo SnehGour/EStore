@@ -4,11 +4,29 @@
 // map over the products and display the products in the card
 // add a footer also
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import products from '../products'
 import Footer from '../component/Footer'
+import ProductList from '../component/ProductList'
+import { getProducts } from '../api/products'
+
+
 const Home = () => {
+
+  const [product, setProducts] = React.useState([])
+
+  useEffect(() => {
+    getProducts().then((products) => {
+      console.log('products', products)
+      setProducts(products);
+    }
+    ).catch((error) => {
+      console.error('Error fetching products: ', error);
+    })
+      ;
+
+  }, []);
+
   return (
     <>
       <div className="container-fluid">
@@ -35,19 +53,10 @@ const Home = () => {
           </div>
         </div>
         <div className="row">
-          {products.map((item) => (
-            <div className="col-md-4" key={item.id}>
-              <div className="card card-custom">
-                <img src={item.image} className="card-img-top card-image-custom" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">{item.name}</h5>
-                  <p className="card-text">{item.desc}</p>
-                  <h3>{item.price}₹</h3>
-                  <Link to={`/catelog/${item.id}`} className="btn btn-primary">
-                    View
-                  </Link>
-                </div>
-              </div>
+
+          {product.map((product) => (
+            <div className="col-3" key={product.id}>
+              <ProductList product={product} />
             </div>
           ))}
         </div>
@@ -56,7 +65,7 @@ const Home = () => {
   );
 }
 
-export default Home
+export default Home;
 
 
 

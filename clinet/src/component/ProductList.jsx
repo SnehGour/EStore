@@ -2,14 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const ProductList = ({ product }) => {
+  console.log('product', product)
     return (
         <>
             <div className="col-md-4" key={product.id}>
               <div className="card card-custom">
-                <img src={product.image} className="card-img-top card-image-custom" alt="..." />
+                <img src={product.pictureUrl} className="card-img-top card-image-custom" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">{product.name}</h5>
-                  <p className="card-text">{product.desc}</p>
+                  <p className="card-text">{product.description}</p>
                   <h3>{product.price}₹</h3>
                   <Link to={`/catelog/${product.id}`} className="btn btn-primary">
                     View
