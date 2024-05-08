@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace API.Models
 {
@@ -14,6 +15,7 @@ namespace API.Models
         public double Price { get; set; }
         public DateTime DateCreated { get; set; }
         public int ProductId { get; set; }
+        [JsonIgnore]
         public virtual Product Product { get; set; }  // Lazy loading
     }
 }

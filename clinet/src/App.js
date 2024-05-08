@@ -12,6 +12,7 @@ import SearchResult from './pages/SearchResult';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import AdminPanel from './pages/AdminPanel';
+import CreateProduct from './pages/CreateProduct';
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/admin' element={<AdminPanel/>}/>
+          <Route path='//admin/create-product' element={<CreateProduct/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/search' element={<SearchResult/>}/>
