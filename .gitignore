@@ -1,1 +1,14 @@
+# Ignore all DLL files
 *.dll
+
+# Ignore all EXE files
+*.exe
+
+# Ignore obj directory
+obj/
+
+# Ignore bin directory
+bin/
+
+# Ignore node_modules directory
+node_modules/
