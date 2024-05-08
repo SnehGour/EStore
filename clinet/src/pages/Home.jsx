@@ -53,12 +53,15 @@ const Home = () => {
           </div>
         </div>
         <div className="row">
-
-          {product.map((product) => (
-            <div className="col-3" key={product.id}>
-              <ProductList product={product} />
-            </div>
-          ))}
+          {product?.length > 0 ? (
+            product.map((product) => (
+              <div className="col-3" key={product.id}>
+                <ProductList product={product} />
+              </div>
+            ))
+          ) : (
+            <p>No products found.</p>
+          )}
         </div>
       </div>
     </>

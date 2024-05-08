@@ -1,14 +1,15 @@
-using API.Models;
 using Microsoft.EntityFrameworkCore;
+using API.Models;
 
-namespace API.Data
+namespace API.Data;
+public class ApplicationDbContext : DbContext
 {
-    public class ApplicationDbContext : DbContext
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options)
-        {
-        }
-
-        public DbSet<Product> products { get; set; }
     }
+
+    public DbSet<Product> Products { get; set; }
+    public DbSet<Cart> Carts { get; set; }
+
 }
