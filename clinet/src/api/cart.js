@@ -2,11 +2,12 @@
 
 // Path: clinet/src/api/cart.js
 import axios from 'axios';
-const BASE_URL = 'http://localhost:5000/api/cart';
+const BASE_URL = 'https://localhost:5000/api/Cart';
 
 export const getCart = async () => {
     try {
         const res = await axios.get(BASE_URL);
+        console.log('cart',res);
         return res.data;
     } catch (error) {
         console.error(error);
@@ -16,7 +17,7 @@ export const getCart = async () => {
 export const addToCart = async (product) => {
     try {
         console.log('cart', product)
-        const res = await axios.post(BASE_URL, product);
+        const res = await axios.post(BASE_URL,product.id, product.quantityInStock);
         return res.data;
     } catch (error) {
         console.error(error);

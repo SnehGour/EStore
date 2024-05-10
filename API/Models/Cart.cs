@@ -11,6 +11,7 @@ namespace API.Models
         [Key]
         public int Id { get; set; }
         public string ProductName { get; set; } = null!;
+        public string ProductImage { get; set; }
         public int Quantity { get; set; }
         public double Price { get; set; }
         public DateTime DateCreated { get; set; }

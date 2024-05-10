@@ -16,7 +16,7 @@ const ProductList = ({ product }) => {
             <p className="card-text">{product.description}</p>
             <h3>{product.price}₹</h3>
             <div className="d-flex justify-content-between">
-              <Link to={`/catelog/${product.id}`} className="btn btn-primary">
+              <Link to={`/catelog/${product.id}`} className="btn btn-dark">
                 View
               </Link>
               <Link to="#" className="btn btn-primary" onClick={async () => {

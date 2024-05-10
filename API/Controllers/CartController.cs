@@ -55,6 +55,7 @@ namespace API.Controllers
             {
                 Price = product.Price,
                 ProductName = product.Name,
+                ProductImage = product.PictureUrl,
                 ProductId = productId,
                 Quantity = quantity,
                 DateCreated = DateTime.Now
@@ -95,6 +96,44 @@ namespace API.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        // Increment quantity
+        [HttpPut("increment/{id}")]
+        public async Task<IActionResult> IncrementQuantity(int id)
+        {
+            var cart = await _context.Carts.FindAsync(id);
+            if (cart == null)
+            {
+                return NotFound();
+            }
+
+            cart.Quantity++;
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
+
+        // Decrement quantity handle the case when quantity is 0
+        [HttpPut("decrement/{id}")]
+        public async Task<IActionResult> DecrementQuantity(int id)
+        {
+            var cart = await _context.Carts.FindAsync(id);
+            if (cart == null)
+            {
+                return NotFound();
+            }
+
+            if (cart.Quantity > 1)
+            {
+                cart.Quantity--;
+            }
+            else
+            {
+                _context.Carts.Remove(cart);
+            }
+
+            await _context.SaveChangesAsync();
+            return Ok();
         }
     }
 }
